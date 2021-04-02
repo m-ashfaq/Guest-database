@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <p>
   <strong>First name:</strong>
@@ -20,5 +20,5 @@
   <%= @guest.Phone %>
 </p>
 
-<%= link_to 'Edit', edit_guest_path(@guest) %> |
-<%= link_to 'Back', guests_path %>
+<%= link_to 'Edit', edit_guest_path(@guest), class:"btn btn-secondary" %> 
+<%= link_to 'Back', guests_path, class:"btn btn-secondary" %>

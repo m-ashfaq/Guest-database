@@ -2058,3 +2058,674 @@ Processing by GuestsController#index as HTML
 Completed 200 OK in 138ms (Views: 132.8ms | ActiveRecord: 2.1ms | Allocations: 7948)
 
 
+Started GET "/guests" for ::1 at 2021-04-03 01:02:28 +1100
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (9.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  ↳ app/views/guests/index.html.erb:16
+  Rendered guests/index.html.erb within layouts/application (Duration: 1046.1ms | Allocations: 5689)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 3.6ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 1119.7ms | Allocations: 10077)
+Completed 200 OK in 1185ms (Views: 1146.5ms | ActiveRecord: 494.6ms | Allocations: 11241)
+
+
+Started GET "/guests" for ::1 at 2021-04-03 01:05:02 +1100
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (2.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  ↳ app/views/guests/index.html.erb:16
+  Rendered guests/index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 2400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 5.1ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 74.9ms | Allocations: 6788)
+Completed 200 OK in 85ms (Views: 80.5ms | ActiveRecord: 2.1ms | Allocations: 7947)
+
+
+Started GET "/guests" for ::1 at 2021-04-03 01:07:02 +1100
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (30.6ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  ↳ app/views/guests/index.html.erb:16
+  Rendered guests/index.html.erb within layouts/application (Duration: 66.9ms | Allocations: 2399)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 2.8ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 106.5ms | Allocations: 6787)
+Completed 200 OK in 116ms (Views: 83.0ms | ActiveRecord: 30.6ms | Allocations: 7946)
+
+
+Started GET "/guests/new" for ::1 at 2021-04-03 01:07:05 +1100
+Processing by GuestsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/new.html.erb within layouts/application
+  Rendered guests/_form.html.erb (Duration: 23.9ms | Allocations: 1453)
+  Rendered guests/new.html.erb within layouts/application (Duration: 28.6ms | Allocations: 1812)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.4ms | Allocations: 131)
+  Rendered layout layouts/application.html.erb (Duration: 50.6ms | Allocations: 5662)
+Completed 200 OK in 57ms (Views: 51.9ms | ActiveRecord: 0.0ms | Allocations: 6223)
+
+
+Started POST "/guests" for ::1 at 2021-04-03 01:07:52 +1100
+Processing by GuestsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "guest"=>{"First_name"=>"Pink", "Last_Name"=>"Panther", "Email"=>"pink@mai.com", "Phone"=>"094367862"}, "commit"=>"Create Guest"}
+  [1m[36mTRANSACTION (45.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/guests_controller.rb:27:in `block in create'
+  [1m[36mGuest Create (52.1ms)[0m  [1m[32mINSERT INTO "guests" ("First_name", "Last_Name", "Email", "Phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["First_name", "Pink"], ["Last_Name", "Panther"], ["Email", "pink@mai.com"], ["Phone", "094367862"], ["created_at", "2021-04-02 14:07:52.120602"], ["updated_at", "2021-04-02 14:07:52.120602"]]
+  ↳ app/controllers/guests_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (46.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/guests_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/guests/13
+Completed 302 Found in 183ms (ActiveRecord: 144.7ms | Allocations: 2703)
+
+
+Started GET "/guests/13" for ::1 at 2021-04-03 01:07:52 +1100
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mGuest Load (1.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/guests_controller.rb:62:in `set_guest'
+  Rendering layout layouts/application.html.erb
+  Rendering guests/show.html.erb within layouts/application
+  Rendered guests/show.html.erb within layouts/application (Duration: 8.7ms | Allocations: 329)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | Allocations: 4171)
+Completed 200 OK in 117ms (Views: 50.2ms | ActiveRecord: 53.7ms | Allocations: 5619)
+
+
+Started GET "/guests/13" for ::1 at 2021-04-03 01:08:14 +1100
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mGuest Load (1.9ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/guests_controller.rb:62:in `set_guest'
+  Rendering layout layouts/application.html.erb
+  Rendering guests/show.html.erb within layouts/application
+  Rendered guests/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 3.0ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 4723)
+Completed 200 OK in 74ms (Views: 49.1ms | ActiveRecord: 1.9ms | Allocations: 6603)
+
+
+Started GET "/guests" for ::1 at 2021-04-03 01:08:16 +1100
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (10.8ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  ↳ app/views/guests/index.html.erb:16
+  Rendered guests/index.html.erb within layouts/application (Duration: 35.1ms | Allocations: 2508)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 65.0ms | Allocations: 6363)
+Completed 200 OK in 69ms (Views: 55.3ms | ActiveRecord: 10.8ms | Allocations: 6921)
+
+
+Started GET "/guests" for ::1 at 2021-04-03 01:09:23 +1100
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (3.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  ↳ app/views/guests/index.html.erb:16
+  Rendered guests/index.html.erb within layouts/application (Duration: 121.6ms | Allocations: 2509)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 7.9ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 187.6ms | Allocations: 6897)
+Completed 200 OK in 214ms (Views: 198.4ms | ActiveRecord: 3.3ms | Allocations: 8056)
+
+
+Started GET "/guests/new" for ::1 at 2021-04-03 01:20:05 +1100
+Processing by GuestsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/new.html.erb within layouts/application
+  Rendered guests/_form.html.erb (Duration: 3.5ms | Allocations: 1485)
+  Rendered guests/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1827)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 1908)
+Completed 500 Internal Server Error in 29ms (Allocations: 3042)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: guest) do |form| %>
+  <% if guest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(guest.errors.count, "error") %> prohibited this guest from being saved:</h2>
+
+      <ul>
+        <% guest.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :First_name %>
+    <%= form.text_field :First_name, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Last_Name %>
+    <%= form.text_field :Last_Name, class:"form-control %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Email %>
+    <%= form.text_field :Email, class:"form-control %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Phone %>
+    <%= form.text_field :Phone, class:"form-control %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class="btn btn-secondary" %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: guest) do |form| %>
+2:      <% if guest.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(guest.errors.count, "error") %> prohibited this guest from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% guest.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field form-group">
+15:        <%= form.label :First_name %>
+16:        <%= form.text_field :First_name, class:"form-control" %>
+17:      </div>
+18:    
+19:      <div class="field form-group">
+20:        <%= form.label :Last_Name %>
+21:        <%= form.text_field :Last_Name, class:"form-control %>
+22:      </div>
+23:    
+24:      <div class="field form-group">
+25:        <%= form.label :Email %>
+26:        <%= form.text_field :Email, class:"form-control %>
+27:      </div>
+28:    
+29:      <div class="field form-group">
+30:        <%= form.label :Phone %>
+31:        <%= form.text_field :Phone, class:"form-control %>
+32:      </div>
+33:    
+34:      <div class="actions">
+35:        <%= form.submit class="btn btn-secondary" %>
+36:      </div>
+37:    <% end %>
+  
+app/views/guests/_form.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:39: unterminated string meets end of file
+app/views/guests/_form.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:39: unterminated string meets end of file
+app/views/guests/_form.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:39: unterminated string meets end of file
+app/views/guests/_form.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:39: unterminated string meets end of file
+app/views/guests/_form.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:39: unterminated string meets end of file
+app/views/guests/_form.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:39: unterminated string meets end of file
+app/views/guests/_form.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+app/views/guests/new.html.erb:3
+Started GET "/guests" for ::1 at 2021-04-03 01:20:12 +1100
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (1.8ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  ↳ app/views/guests/index.html.erb:16
+  Rendered guests/index.html.erb within layouts/application (Duration: 113.0ms | Allocations: 5816)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 4.5ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 168.5ms | Allocations: 10206)
+Completed 200 OK in 174ms (Views: 170.2ms | ActiveRecord: 22.2ms | Allocations: 10766)
+
+
+Started GET "/guests/new" for ::1 at 2021-04-03 01:20:14 +1100
+Processing by GuestsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/new.html.erb within layouts/application
+  Rendered guests/_form.html.erb (Duration: 1.3ms | Allocations: 1471)
+  Rendered guests/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1572)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1655)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2055)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: guest) do |form| %>
+  <% if guest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(guest.errors.count, "error") %> prohibited this guest from being saved:</h2>
+
+      <ul>
+        <% guest.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :First_name %>
+    <%= form.text_field :First_name, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Last_Name %>
+    <%= form.text_field :Last_Name, class:"form-control %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Email %>
+    <%= form.text_field :Email, class:"form-control %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Phone %>
+    <%= form.text_field :Phone, class:"form-control %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class="btn btn-secondary" %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: guest) do |form| %>
+2:      <% if guest.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(guest.errors.count, "error") %> prohibited this guest from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% guest.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field form-group">
+15:        <%= form.label :First_name %>
+16:        <%= form.text_field :First_name, class:"form-control" %>
+17:      </div>
+18:    
+19:      <div class="field form-group">
+20:        <%= form.label :Last_Name %>
+21:        <%= form.text_field :Last_Name, class:"form-control %>
+22:      </div>
+23:    
+24:      <div class="field form-group">
+25:        <%= form.label :Email %>
+26:        <%= form.text_field :Email, class:"form-control %>
+27:      </div>
+28:    
+29:      <div class="field form-group">
+30:        <%= form.label :Phone %>
+31:        <%= form.text_field :Phone, class:"form-control %>
+32:      </div>
+33:    
+34:      <div class="actions">
+35:        <%= form.submit class="btn btn-secondary" %>
+36:      </div>
+37:    <% end %>
+  
+app/views/guests/_form.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:39: unterminated string meets end of file
+app/views/guests/_form.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:39: unterminated string meets end of file
+app/views/guests/_form.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:39: unterminated string meets end of file
+app/views/guests/_form.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:39: unterminated string meets end of file
+app/views/guests/_form.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:39: unterminated string meets end of file
+app/views/guests/_form.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:24: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:26: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/guests/_form.html.erb:35: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/guests/_form.html.erb:39: unterminated string meets end of file
+app/views/guests/_form.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+app/views/guests/new.html.erb:3
+Started GET "/guests/new" for ::1 at 2021-04-03 01:22:05 +1100
+Processing by GuestsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/new.html.erb within layouts/application
+  Rendered guests/_form.html.erb (Duration: 2.3ms | Allocations: 1497)
+  Rendered guests/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1839)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 1920)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 3058)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: guest) do |form| %>
+  <% if guest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(guest.errors.count, "error") %> prohibited this guest from being saved:</h2>
+
+      <ul>
+        <% guest.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :First_name %>
+    <%= form.text_field :First_name, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Last_Name %>
+    <%= form.text_field :Last_Name, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Email %>
+    <%= form.text_field :Email, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Phone %>
+    <%= form.text_field :Phone, class:"form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class="btn btn-secondary" %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: guest) do |form| %>
+2:      <% if guest.errors.any? %>
+3:        <div id="error_explanation">
+4:          <h2><%= pluralize(guest.errors.count, "error") %> prohibited this guest from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% guest.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div class="field form-group">
+15:        <%= form.label :First_name %>
+16:        <%= form.text_field :First_name, class:"form-control" %>
+17:      </div>
+18:    
+19:      <div class="field form-group">
+20:        <%= form.label :Last_Name %>
+21:        <%= form.text_field :Last_Name, class:"form-control" %>
+22:      </div>
+23:    
+24:      <div class="field form-group">
+25:        <%= form.label :Email %>
+26:        <%= form.text_field :Email, class:"form-control" %>
+27:      </div>
+28:    
+29:      <div class="field form-group">
+30:        <%= form.label :Phone %>
+31:        <%= form.text_field :Phone, class:"form-control" %>
+32:      </div>
+33:    
+34:      <div class="actions">
+35:        <%= form.submit class="btn btn-secondary" %>
+36:      </div>
+37:    <% end %>
+  
+app/views/guests/_form.html.erb:35: syntax error, unexpected '='
+app/views/guests/_form.html.erb:35: syntax error, unexpected '='
+app/views/guests/_form.html.erb:35: syntax error, unexpected '='
+app/views/guests/_form.html.erb:35: syntax error, unexpected '='
+app/views/guests/_form.html.erb:35: syntax error, unexpected '='
+app/views/guests/_form.html.erb:35: syntax error, unexpected '='
+app/views/guests/new.html.erb:3
+Started GET "/guests/new" for ::1 at 2021-04-03 01:23:41 +1100
+Processing by GuestsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/new.html.erb within layouts/application
+  Rendered guests/_form.html.erb (Duration: 5.4ms | Allocations: 1488)
+  Rendered guests/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1846)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 50.7ms | Allocations: 6234)
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.0ms | Allocations: 7401)
+
+
+Started GET "/guests/new" for ::1 at 2021-04-03 01:26:29 +1100
+Processing by GuestsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/new.html.erb within layouts/application
+  Rendered guests/_form.html.erb (Duration: 12.2ms | Allocations: 1485)
+  Rendered guests/new.html.erb within layouts/application (Duration: 16.0ms | Allocations: 1850)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 63.2ms | Allocations: 6236)
+Completed 200 OK in 75ms (Views: 72.5ms | Allocations: 7398)
+
+
+Started GET "/guests/new" for ::1 at 2021-04-03 01:27:33 +1100
+Processing by GuestsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/new.html.erb within layouts/application
+  Rendered guests/_form.html.erb (Duration: 4.7ms | Allocations: 1486)
+  Rendered guests/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1858)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 2.8ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | Allocations: 6246)
+Completed 200 OK in 49ms (Views: 45.0ms | Allocations: 7414)
+
+
+Started GET "/guests/new" for ::1 at 2021-04-03 01:53:43 +1100
+Processing by GuestsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/new.html.erb within layouts/application
+  Rendered guests/_form.html.erb (Duration: 15.7ms | Allocations: 1485)
+  Rendered guests/new.html.erb within layouts/application (Duration: 21.3ms | Allocations: 1850)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 3.6ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 77.4ms | Allocations: 6298)
+Completed 200 OK in 115ms (Views: 96.5ms | Allocations: 7460)
+
+
+Started POST "/guests" for ::1 at 2021-04-03 01:54:10 +1100
+Processing by GuestsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "guest"=>{"First_name"=>"App", "Last_Name"=>"Mink", "Email"=>"app@mail.com", "Phone"=>"098765588542"}, "commit"=>"Create Guest"}
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/guests_controller.rb:27:in `block in create'
+  [1m[36mGuest Create (17.8ms)[0m  [1m[32mINSERT INTO "guests" ("First_name", "Last_Name", "Email", "Phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["First_name", "App"], ["Last_Name", "Mink"], ["Email", "app@mail.com"], ["Phone", "098765588542"], ["created_at", "2021-04-02 14:54:11.032178"], ["updated_at", "2021-04-02 14:54:11.032178"]]
+  ↳ app/controllers/guests_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/guests_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/guests/14
+Completed 302 Found in 212ms (ActiveRecord: 61.1ms | Allocations: 5696)
+
+
+Started GET "/guests/14" for ::1 at 2021-04-03 01:54:11 +1100
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGuest Load (1.9ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/guests_controller.rb:62:in `set_guest'
+  Rendering layout layouts/application.html.erb
+  Rendering guests/show.html.erb within layouts/application
+  Rendered guests/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 337)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 132)
+  Rendered layouts/_alerts.html.erb (Duration: 1.8ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 4530)
+Completed 200 OK in 68ms (Views: 26.2ms | ActiveRecord: 12.3ms | Allocations: 6023)
+
+
+Started GET "/guests/14" for ::1 at 2021-04-03 01:55:30 +1100
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGuest Load (4.7ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/guests_controller.rb:62:in `set_guest'
+  Rendering layout layouts/application.html.erb
+  Rendering guests/show.html.erb within layouts/application
+  Rendered guests/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 328)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 2.7ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 4767)
+Completed 200 OK in 82ms (Views: 55.0ms | ActiveRecord: 4.7ms | Allocations: 6641)
+
+
+Started GET "/guests/14/edit" for ::1 at 2021-04-03 01:55:35 +1100
+Processing by GuestsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGuest Load (4.5ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/guests_controller.rb:62:in `set_guest'
+  Rendering layout layouts/application.html.erb
+  Rendering guests/edit.html.erb within layouts/application
+  Rendered guests/_form.html.erb (Duration: 10.6ms | Allocations: 1523)
+  Rendered guests/edit.html.erb within layouts/application (Duration: 16.9ms | Allocations: 1927)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 131)
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 5790)
+Completed 200 OK in 81ms (Views: 39.3ms | ActiveRecord: 4.5ms | Allocations: 7060)
+
+
+Started PATCH "/guests/14" for ::1 at 2021-04-03 01:55:37 +1100
+Processing by GuestsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "guest"=>{"First_name"=>"App", "Last_Name"=>"Mink", "Email"=>"app@mail.com", "Phone"=>"098765588542"}, "commit"=>"Update Guest", "id"=>"14"}
+  [1m[36mGuest Load (2.5ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/guests_controller.rb:62:in `set_guest'
+Redirected to http://localhost:3000/guests/14
+Completed 302 Found in 40ms (ActiveRecord: 2.5ms | Allocations: 1291)
+
+
+Started GET "/guests/14" for ::1 at 2021-04-03 01:55:37 +1100
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mGuest Load (0.9ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/guests_controller.rb:62:in `set_guest'
+  Rendering layout layouts/application.html.erb
+  Rendering guests/show.html.erb within layouts/application
+  Rendered guests/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 119)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 3.1ms | Allocations: 129)
+  Rendered layouts/_alerts.html.erb (Duration: 1.9ms | Allocations: 144)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 4313)
+Completed 200 OK in 62ms (Views: 39.7ms | ActiveRecord: 0.9ms | Allocations: 5461)
+
+
+Started GET "/guests" for ::1 at 2021-04-03 01:57:21 +1100
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (2.7ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 34.4ms | Allocations: 2592)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 6.5ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 74.9ms | Allocations: 7041)
+Completed 200 OK in 85ms (Views: 79.0ms | ActiveRecord: 2.7ms | Allocations: 8211)
+
+
+Started DELETE "/guests/1" for ::1 at 2021-04-03 01:57:25 +1100
+Processing by GuestsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mGuest Load (2.7ms)[0m  [1m[34mSELECT "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/guests_controller.rb:62:in `set_guest'
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/guests_controller.rb:52:in `destroy'
+  [1m[36mGuest Destroy (23.3ms)[0m  [1m[31mDELETE FROM "guests" WHERE "guests"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/guests_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (43.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/guests_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/guests
+Completed 302 Found in 112ms (ActiveRecord: 77.4ms | Allocations: 2860)
+
+
+Started GET "/guests" for ::1 at 2021-04-03 01:57:25 +1100
+Processing by GuestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (6.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  ↳ app/views/guests/index.html.erb:15
+  Rendered guests/index.html.erb within layouts/application (Duration: 17.9ms | Allocations: 2220)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 129)
+  Rendered layouts/_alerts.html.erb (Duration: 1.6ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 80.5ms | Allocations: 6414)
+Completed 200 OK in 84ms (Views: 75.9ms | ActiveRecord: 6.1ms | Allocations: 6843)
+
+
